@@ -26,8 +26,9 @@ const observable = Observable.create((obs) => {
 });
 
 observable
+  .map((val) => val += `!`)
+  .filter((val) => val.length > 5)
   .subscribe((val) => exampleDiv.innerHTML += '<br />' + val,
     () => null,
     () => exampleDiv.innerHTML += '<br />Observations Complete'
   );
-

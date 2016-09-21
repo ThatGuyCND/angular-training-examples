@@ -25,10 +25,11 @@ const observable = Observable.create((obs) => {
   }, 5000);
 });
 
+const pluck = (val) => val.data;
+
 observable
-  .map((val) => val.data)
+  .map(pluck)
   .subscribe((val) => exampleDiv.innerHTML += '<br />' + val,
     () => null,
     () => exampleDiv.innerHTML += '<br />Observations Complete'
   );
-

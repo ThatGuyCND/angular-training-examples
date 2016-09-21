@@ -18,6 +18,8 @@
 
   "files": [
     "app.module.ts",
+    "example.module.ts",
+    "index.ts",
     "main.ts",
     "typings.d.ts"
   ]
